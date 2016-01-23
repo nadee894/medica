@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Login
     Inherits System.Windows.Forms.Form
 
     'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
@@ -90,7 +90,7 @@ Partial Class Form1
         Me.btnForgotPassword.Text = "Forgotton Password"
         Me.btnForgotPassword.UseVisualStyleBackColor = True
         '
-        'Form1
+        'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -102,7 +102,7 @@ Partial Class Form1
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.txtUserName)
         Me.Controls.Add(Me.lblUserName)
-        Me.Name = "Form1"
+        Me.Name = "Login"
         Me.Text = "Login Form"
         Me.ResumeLayout(False)
         Me.PerformLayout()
