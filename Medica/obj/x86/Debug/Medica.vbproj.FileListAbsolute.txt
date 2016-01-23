@@ -1,0 +1,9 @@
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\bin\Debug\Medica.exe
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\bin\Debug\Medica.pdb
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\bin\Debug\Medica.xml
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Form1.resources
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Resources.resources
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.vbproj.GenerateResource.Cache
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.exe
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.xml
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.pdb
