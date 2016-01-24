@@ -7,3 +7,4 @@ C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.exe
 C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.xml
 C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.pdb
 C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Login.resources
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Patient_Registration.resources

@@ -60,6 +60,7 @@ Partial Class Login
         '
         Me.txtPassword.Location = New System.Drawing.Point(96, 119)
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(148, 20)
         Me.txtPassword.TabIndex = 3
         '
@@ -87,7 +88,7 @@ Partial Class Login
         Me.btnForgotPassword.Name = "btnForgotPassword"
         Me.btnForgotPassword.Size = New System.Drawing.Size(115, 23)
         Me.btnForgotPassword.TabIndex = 6
-        Me.btnForgotPassword.Text = "Forgotton Password"
+        Me.btnForgotPassword.Text = "Forgot Password"
         Me.btnForgotPassword.UseVisualStyleBackColor = True
         '
         'Login
@@ -103,6 +104,8 @@ Partial Class Login
         Me.Controls.Add(Me.txtUserName)
         Me.Controls.Add(Me.lblUserName)
         Me.Name = "Login"
+        Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login Form"
         Me.ResumeLayout(False)
         Me.PerformLayout()

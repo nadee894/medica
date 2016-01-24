@@ -72,6 +72,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess.vb" />
     <Compile Include="DBControl.vb" />
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
@@ -111,6 +112,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient Registration.resx">
+      <DependentUpon>Patient Registration.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
