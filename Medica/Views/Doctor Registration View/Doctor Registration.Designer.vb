@@ -26,7 +26,6 @@ Partial Class Patient_Registration
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvDocRegistration = New System.Windows.Forms.DataGridView()
-        Me.panelDocRegistration = New System.Windows.Forms.Panel()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
@@ -38,8 +37,9 @@ Partial Class Patient_Registration
         Me.txtDoctorID = New System.Windows.Forms.TextBox()
         Me.txtDoctorName = New System.Windows.Forms.TextBox()
         Me.txtSpecialization = New System.Windows.Forms.TextBox()
+        Me.gbDoctorReg = New System.Windows.Forms.GroupBox()
         CType(Me.dgvDocRegistration, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.panelDocRegistration.SuspendLayout()
+        Me.gbDoctorReg.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvDocRegistration
@@ -73,19 +73,6 @@ Partial Class Patient_Registration
         Me.dgvDocRegistration.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvDocRegistration.Size = New System.Drawing.Size(356, 437)
         Me.dgvDocRegistration.TabIndex = 0
-        '
-        'panelDocRegistration
-        '
-        Me.panelDocRegistration.Controls.Add(Me.txtSpecialization)
-        Me.panelDocRegistration.Controls.Add(Me.txtDoctorName)
-        Me.panelDocRegistration.Controls.Add(Me.txtDoctorID)
-        Me.panelDocRegistration.Controls.Add(Me.lblSpecialization)
-        Me.panelDocRegistration.Controls.Add(Me.lblDoctorName)
-        Me.panelDocRegistration.Controls.Add(Me.lblDoctorID)
-        Me.panelDocRegistration.Location = New System.Drawing.Point(12, 12)
-        Me.panelDocRegistration.Name = "panelDocRegistration"
-        Me.panelDocRegistration.Size = New System.Drawing.Size(376, 236)
-        Me.panelDocRegistration.TabIndex = 1
         '
         'btnAdd
         '
@@ -135,7 +122,7 @@ Partial Class Patient_Registration
         'lblDoctorID
         '
         Me.lblDoctorID.AutoSize = True
-        Me.lblDoctorID.Location = New System.Drawing.Point(22, 28)
+        Me.lblDoctorID.Location = New System.Drawing.Point(32, 55)
         Me.lblDoctorID.Name = "lblDoctorID"
         Me.lblDoctorID.Size = New System.Drawing.Size(53, 13)
         Me.lblDoctorID.TabIndex = 0
@@ -144,7 +131,7 @@ Partial Class Patient_Registration
         'lblDoctorName
         '
         Me.lblDoctorName.AutoSize = True
-        Me.lblDoctorName.Location = New System.Drawing.Point(22, 103)
+        Me.lblDoctorName.Location = New System.Drawing.Point(32, 130)
         Me.lblDoctorName.Name = "lblDoctorName"
         Me.lblDoctorName.Size = New System.Drawing.Size(70, 13)
         Me.lblDoctorName.TabIndex = 1
@@ -153,7 +140,7 @@ Partial Class Patient_Registration
         'lblSpecialization
         '
         Me.lblSpecialization.AutoSize = True
-        Me.lblSpecialization.Location = New System.Drawing.Point(22, 173)
+        Me.lblSpecialization.Location = New System.Drawing.Point(32, 200)
         Me.lblSpecialization.Name = "lblSpecialization"
         Me.lblSpecialization.Size = New System.Drawing.Size(72, 13)
         Me.lblSpecialization.TabIndex = 2
@@ -161,36 +148,51 @@ Partial Class Patient_Registration
         '
         'txtDoctorID
         '
-        Me.txtDoctorID.Location = New System.Drawing.Point(149, 25)
+        Me.txtDoctorID.Location = New System.Drawing.Point(159, 52)
         Me.txtDoctorID.Name = "txtDoctorID"
         Me.txtDoctorID.Size = New System.Drawing.Size(172, 20)
         Me.txtDoctorID.TabIndex = 3
         '
         'txtDoctorName
         '
-        Me.txtDoctorName.Location = New System.Drawing.Point(149, 100)
+        Me.txtDoctorName.Location = New System.Drawing.Point(159, 127)
         Me.txtDoctorName.Name = "txtDoctorName"
         Me.txtDoctorName.Size = New System.Drawing.Size(172, 20)
         Me.txtDoctorName.TabIndex = 4
         '
         'txtSpecialization
         '
-        Me.txtSpecialization.Location = New System.Drawing.Point(149, 170)
+        Me.txtSpecialization.Location = New System.Drawing.Point(159, 197)
         Me.txtSpecialization.Name = "txtSpecialization"
         Me.txtSpecialization.Size = New System.Drawing.Size(172, 20)
         Me.txtSpecialization.TabIndex = 5
+        '
+        'gbDoctorReg
+        '
+        Me.gbDoctorReg.Controls.Add(Me.txtSpecialization)
+        Me.gbDoctorReg.Controls.Add(Me.lblDoctorID)
+        Me.gbDoctorReg.Controls.Add(Me.txtDoctorName)
+        Me.gbDoctorReg.Controls.Add(Me.lblDoctorName)
+        Me.gbDoctorReg.Controls.Add(Me.txtDoctorID)
+        Me.gbDoctorReg.Controls.Add(Me.lblSpecialization)
+        Me.gbDoctorReg.Location = New System.Drawing.Point(12, 12)
+        Me.gbDoctorReg.Name = "gbDoctorReg"
+        Me.gbDoctorReg.Size = New System.Drawing.Size(374, 275)
+        Me.gbDoctorReg.TabIndex = 7
+        Me.gbDoctorReg.TabStop = False
+        Me.gbDoctorReg.Text = "Doctor Details"
         '
         'Patient_Registration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(784, 461)
+        Me.Controls.Add(Me.gbDoctorReg)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.panelDocRegistration)
         Me.Controls.Add(Me.dgvDocRegistration)
         Me.Name = "Patient_Registration"
         Me.ShowIcon = False
@@ -198,13 +200,12 @@ Partial Class Patient_Registration
         Me.Text = "Doctor Registration"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.dgvDocRegistration, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.panelDocRegistration.ResumeLayout(False)
-        Me.panelDocRegistration.PerformLayout()
+        Me.gbDoctorReg.ResumeLayout(False)
+        Me.gbDoctorReg.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents dgvDocRegistration As System.Windows.Forms.DataGridView
-    Friend WithEvents panelDocRegistration As System.Windows.Forms.Panel
     Friend WithEvents lblSpecialization As System.Windows.Forms.Label
     Friend WithEvents lblDoctorName As System.Windows.Forms.Label
     Friend WithEvents lblDoctorID As System.Windows.Forms.Label
@@ -216,4 +217,5 @@ Partial Class Patient_Registration
     Friend WithEvents txtSpecialization As System.Windows.Forms.TextBox
     Friend WithEvents txtDoctorName As System.Windows.Forms.TextBox
     Friend WithEvents txtDoctorID As System.Windows.Forms.TextBox
+    Friend WithEvents gbDoctorReg As System.Windows.Forms.GroupBox
 End Class
