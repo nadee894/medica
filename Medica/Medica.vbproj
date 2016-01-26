@@ -48,6 +48,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dapino-Medical-Medical-suitecase.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -74,10 +77,10 @@
   <ItemGroup>
     <Compile Include="DataAccess.vb" />
     <Compile Include="DBControl.vb" />
-    <Compile Include="Login.vb">
+    <Compile Include="Views\Login view\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.vb">
+    <Compile Include="Views\Login view\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -96,15 +99,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Patient Registration.Designer.vb">
+    <Compile Include="Views\Doctor Registration View\Doctor Registration.Designer.vb">
+      <DependentUpon>Doctor Registration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Doctor Registration View\Doctor Registration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Patient Information\Patient Registration.Designer.vb">
       <DependentUpon>Patient Registration.vb</DependentUpon>
     </Compile>
-    <Compile Include="Patient Registration.vb">
+    <Compile Include="Views\Patient Information\Patient Registration.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Views\Login view\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -113,7 +122,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient Registration.resx">
+    <EmbeddedResource Include="Views\Doctor Registration View\Doctor Registration.resx">
+      <DependentUpon>Doctor Registration.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Patient Information\Patient Registration.resx">
       <DependentUpon>Patient Registration.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -127,6 +139,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dapino-Medical-Medical-suitecase.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
