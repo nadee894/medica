@@ -18,21 +18,21 @@ Public Class DataAccess
 
     End Sub
 
-    Public Function GetCategories() As DataSet
+    Public Function GetPatientDetails() As DataSet
 
-        Dim query As String = "SELECT * FROM Categories"
+        Dim query As String = "SELECT * FROM PATIENT"
         Dim cmd As New OleDbCommand(query)
-        Return FillDataSet(cmd, "Categories")
+        Return FillDataSet(cmd, "PATIENT")
 
     End Function
 
- Public SubUpdateCategories(ByVal name As String)
-    Dim query As String = "update Categories set name = 'new2' where name = ?"
-    Dim cmd As New OleDbCommand(query)
-cmd.Parameters.AddWithValue("Name", name)
-  Return FillDataSet(cmd, "Categories")
+    ' Public SubUpdateCategories(ByVal name As String)
+    '    Dim query As String = "update Categories set name = 'new2' where name = ?"
+    '    Dim cmd As New OleDbCommand(query)
+    'cmd.Parameters.AddWithValue("Name", name)
+    '  Return FillDataSet(cmd, "Categories")
 
- End Sub
+    'End Sub
 
     Public Function GetItems() As DataSet
 
@@ -73,7 +73,7 @@ cmd.Parameters.AddWithValue("Name", name)
 
     End Sub
 
-    Public Sub AddItem(ByVal title As String, ByVal description As String, _
+    Public Sub addPatient(ByVal title As String, ByVal description As String, _
        ByVal price As Decimal, ByVal categoryID As Integer)
 
         Dim con As New OleDbConnection(connectionString)

@@ -22,45 +22,150 @@ Partial Class Patient_Registration
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvPatientDetails = New System.Windows.Forms.DataGridView()
+        Me.PATIENTNODataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATIENTNAMEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATIENTADDRESSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATREGDATEDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATGENDERDataGridViewCheckBoxColumn = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.PATCONTACTDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATBDAYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PATIENTBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MEDICADataSet = New Medica.MEDICADataSet()
         Me.gbPatientReg = New System.Windows.Forms.GroupBox()
-        Me.txtPatientName = New System.Windows.Forms.TextBox()
-        Me.lblAddress = New System.Windows.Forms.Label()
-        Me.txtAddress = New System.Windows.Forms.RichTextBox()
-        Me.lblPatientName = New System.Windows.Forms.Label()
-        Me.lblPatientNo = New System.Windows.Forms.Label()
-        Me.txtPatientNo = New System.Windows.Forms.TextBox()
-        Me.lblContactNo = New System.Windows.Forms.Label()
-        Me.txtContactNo = New System.Windows.Forms.TextBox()
-        Me.lblDateOfReg = New System.Windows.Forms.Label()
-        Me.dtpDateOfReg = New System.Windows.Forms.DateTimePicker()
-        Me.lblGender = New System.Windows.Forms.Label()
-        Me.rbMale = New System.Windows.Forms.RadioButton()
-        Me.rbFemale = New System.Windows.Forms.RadioButton()
-        Me.lblDateOfBirth = New System.Windows.Forms.Label()
-        Me.dtpDateOfBirth = New System.Windows.Forms.DateTimePicker()
+        Me.gbMedicineInformation = New System.Windows.Forms.GroupBox()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.lblCurrentProblem = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.lblHistory = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.gbMedicineInformation = New System.Windows.Forms.GroupBox()
-        Me.lblHistory = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
-        Me.lblCurrentProblem = New System.Windows.Forms.Label()
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.dtpDateOfBirth = New System.Windows.Forms.DateTimePicker()
+        Me.lblDateOfBirth = New System.Windows.Forms.Label()
+        Me.rbFemale = New System.Windows.Forms.RadioButton()
+        Me.rbMale = New System.Windows.Forms.RadioButton()
+        Me.lblGender = New System.Windows.Forms.Label()
+        Me.dtpDateOfReg = New System.Windows.Forms.DateTimePicker()
+        Me.lblDateOfReg = New System.Windows.Forms.Label()
+        Me.txtContactNo = New System.Windows.Forms.TextBox()
+        Me.lblContactNo = New System.Windows.Forms.Label()
+        Me.txtPatientNo = New System.Windows.Forms.TextBox()
+        Me.lblPatientNo = New System.Windows.Forms.Label()
+        Me.lblPatientName = New System.Windows.Forms.Label()
+        Me.txtAddress = New System.Windows.Forms.RichTextBox()
+        Me.lblAddress = New System.Windows.Forms.Label()
+        Me.txtPatientName = New System.Windows.Forms.TextBox()
+        Me.PATIENTTableAdapter = New Medica.MEDICADataSetTableAdapters.PATIENTTableAdapter()
         CType(Me.dgvPatientDetails, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PATIENTBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MEDICADataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gbPatientReg.SuspendLayout()
         Me.gbMedicineInformation.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvPatientDetails
         '
+        Me.dgvPatientDetails.AllowUserToOrderColumns = True
+        Me.dgvPatientDetails.AutoGenerateColumns = False
+        Me.dgvPatientDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvPatientDetails.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPatientDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvPatientDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvPatientDetails.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.PATIENTNODataGridViewTextBoxColumn, Me.PATIENTNAMEDataGridViewTextBoxColumn, Me.PATIENTADDRESSDataGridViewTextBoxColumn, Me.PATREGDATEDataGridViewTextBoxColumn, Me.PATGENDERDataGridViewCheckBoxColumn, Me.PATCONTACTDataGridViewTextBoxColumn, Me.PATBDAYDataGridViewTextBoxColumn})
+        Me.dgvPatientDetails.DataSource = Me.PATIENTBindingSource
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvPatientDetails.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvPatientDetails.Location = New System.Drawing.Point(616, 12)
         Me.dgvPatientDetails.Name = "dgvPatientDetails"
-        Me.dgvPatientDetails.Size = New System.Drawing.Size(347, 437)
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvPatientDetails.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvPatientDetails.Size = New System.Drawing.Size(702, 437)
         Me.dgvPatientDetails.TabIndex = 0
+        '
+        'PATIENTNODataGridViewTextBoxColumn
+        '
+        Me.PATIENTNODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PATIENTNODataGridViewTextBoxColumn.DataPropertyName = "PATIENT_NO"
+        Me.PATIENTNODataGridViewTextBoxColumn.HeaderText = "PATIENT_NO"
+        Me.PATIENTNODataGridViewTextBoxColumn.Name = "PATIENTNODataGridViewTextBoxColumn"
+        '
+        'PATIENTNAMEDataGridViewTextBoxColumn
+        '
+        Me.PATIENTNAMEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PATIENTNAMEDataGridViewTextBoxColumn.DataPropertyName = "PATIENT_NAME"
+        Me.PATIENTNAMEDataGridViewTextBoxColumn.HeaderText = "PATIENT_NAME"
+        Me.PATIENTNAMEDataGridViewTextBoxColumn.Name = "PATIENTNAMEDataGridViewTextBoxColumn"
+        '
+        'PATIENTADDRESSDataGridViewTextBoxColumn
+        '
+        Me.PATIENTADDRESSDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PATIENTADDRESSDataGridViewTextBoxColumn.DataPropertyName = "PATIENT_ADDRESS"
+        Me.PATIENTADDRESSDataGridViewTextBoxColumn.HeaderText = "PATIENT_ADDRESS"
+        Me.PATIENTADDRESSDataGridViewTextBoxColumn.Name = "PATIENTADDRESSDataGridViewTextBoxColumn"
+        '
+        'PATREGDATEDataGridViewTextBoxColumn
+        '
+        Me.PATREGDATEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PATREGDATEDataGridViewTextBoxColumn.DataPropertyName = "PAT_REG_DATE"
+        Me.PATREGDATEDataGridViewTextBoxColumn.HeaderText = "PAT_REG_DATE"
+        Me.PATREGDATEDataGridViewTextBoxColumn.Name = "PATREGDATEDataGridViewTextBoxColumn"
+        '
+        'PATGENDERDataGridViewCheckBoxColumn
+        '
+        Me.PATGENDERDataGridViewCheckBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PATGENDERDataGridViewCheckBoxColumn.DataPropertyName = "PAT_GENDER"
+        Me.PATGENDERDataGridViewCheckBoxColumn.HeaderText = "PAT_GENDER"
+        Me.PATGENDERDataGridViewCheckBoxColumn.Name = "PATGENDERDataGridViewCheckBoxColumn"
+        '
+        'PATCONTACTDataGridViewTextBoxColumn
+        '
+        Me.PATCONTACTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PATCONTACTDataGridViewTextBoxColumn.DataPropertyName = "PAT_CONTACT"
+        Me.PATCONTACTDataGridViewTextBoxColumn.HeaderText = "PAT_CONTACT"
+        Me.PATCONTACTDataGridViewTextBoxColumn.Name = "PATCONTACTDataGridViewTextBoxColumn"
+        '
+        'PATBDAYDataGridViewTextBoxColumn
+        '
+        Me.PATBDAYDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.PATBDAYDataGridViewTextBoxColumn.DataPropertyName = "PAT_BDAY"
+        Me.PATBDAYDataGridViewTextBoxColumn.HeaderText = "PAT_BDAY"
+        Me.PATBDAYDataGridViewTextBoxColumn.Name = "PATBDAYDataGridViewTextBoxColumn"
+        '
+        'PATIENTBindingSource
+        '
+        Me.PATIENTBindingSource.DataMember = "PATIENT"
+        Me.PATIENTBindingSource.DataSource = Me.MEDICADataSet
+        '
+        'MEDICADataSet
+        '
+        Me.MEDICADataSet.DataSetName = "MEDICADataSet"
+        Me.MEDICADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'gbPatientReg
         '
@@ -92,133 +197,52 @@ Partial Class Patient_Registration
         Me.gbPatientReg.TabStop = False
         Me.gbPatientReg.Text = "Personal Details"
         '
-        'txtPatientName
+        'gbMedicineInformation
         '
-        Me.txtPatientName.Location = New System.Drawing.Point(116, 26)
-        Me.txtPatientName.Name = "txtPatientName"
-        Me.txtPatientName.Size = New System.Drawing.Size(144, 20)
-        Me.txtPatientName.TabIndex = 2
+        Me.gbMedicineInformation.Controls.Add(Me.RichTextBox2)
+        Me.gbMedicineInformation.Controls.Add(Me.lblCurrentProblem)
+        Me.gbMedicineInformation.Controls.Add(Me.RichTextBox1)
+        Me.gbMedicineInformation.Controls.Add(Me.lblHistory)
+        Me.gbMedicineInformation.Location = New System.Drawing.Point(16, 194)
+        Me.gbMedicineInformation.Name = "gbMedicineInformation"
+        Me.gbMedicineInformation.Size = New System.Drawing.Size(544, 157)
+        Me.gbMedicineInformation.TabIndex = 20
+        Me.gbMedicineInformation.TabStop = False
+        Me.gbMedicineInformation.Text = "Medicine Information"
         '
-        'lblAddress
+        'RichTextBox2
         '
-        Me.lblAddress.AutoSize = True
-        Me.lblAddress.Location = New System.Drawing.Point(23, 68)
-        Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(45, 13)
-        Me.lblAddress.TabIndex = 1
-        Me.lblAddress.Text = "Address"
+        Me.RichTextBox2.Location = New System.Drawing.Point(384, 32)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(144, 96)
+        Me.RichTextBox2.TabIndex = 3
+        Me.RichTextBox2.Text = ""
         '
-        'txtAddress
+        'lblCurrentProblem
         '
-        Me.txtAddress.Location = New System.Drawing.Point(116, 68)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(144, 52)
-        Me.txtAddress.TabIndex = 3
-        Me.txtAddress.Text = ""
+        Me.lblCurrentProblem.AutoSize = True
+        Me.lblCurrentProblem.Location = New System.Drawing.Point(271, 32)
+        Me.lblCurrentProblem.Name = "lblCurrentProblem"
+        Me.lblCurrentProblem.Size = New System.Drawing.Size(82, 13)
+        Me.lblCurrentProblem.TabIndex = 2
+        Me.lblCurrentProblem.Text = "Current Problem"
         '
-        'lblPatientName
+        'RichTextBox1
         '
-        Me.lblPatientName.AutoSize = True
-        Me.lblPatientName.Location = New System.Drawing.Point(20, 26)
-        Me.lblPatientName.Name = "lblPatientName"
-        Me.lblPatientName.Size = New System.Drawing.Size(71, 13)
-        Me.lblPatientName.TabIndex = 0
-        Me.lblPatientName.Text = "Patient Name"
+        Me.RichTextBox1.Location = New System.Drawing.Point(90, 32)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(144, 96)
+        Me.RichTextBox1.TabIndex = 1
+        Me.RichTextBox1.Text = ""
         '
-        'lblPatientNo
+        'lblHistory
         '
-        Me.lblPatientNo.AutoSize = True
-        Me.lblPatientNo.Location = New System.Drawing.Point(294, 33)
-        Me.lblPatientNo.Name = "lblPatientNo"
-        Me.lblPatientNo.Size = New System.Drawing.Size(57, 13)
-        Me.lblPatientNo.TabIndex = 4
-        Me.lblPatientNo.Text = "Patient No"
-        '
-        'txtPatientNo
-        '
-        Me.txtPatientNo.Location = New System.Drawing.Point(410, 26)
-        Me.txtPatientNo.Name = "txtPatientNo"
-        Me.txtPatientNo.Size = New System.Drawing.Size(144, 20)
-        Me.txtPatientNo.TabIndex = 5
-        '
-        'lblContactNo
-        '
-        Me.lblContactNo.AutoSize = True
-        Me.lblContactNo.Location = New System.Drawing.Point(23, 144)
-        Me.lblContactNo.Name = "lblContactNo"
-        Me.lblContactNo.Size = New System.Drawing.Size(61, 13)
-        Me.lblContactNo.TabIndex = 6
-        Me.lblContactNo.Text = "Contact No"
-        '
-        'txtContactNo
-        '
-        Me.txtContactNo.Location = New System.Drawing.Point(116, 144)
-        Me.txtContactNo.Name = "txtContactNo"
-        Me.txtContactNo.Size = New System.Drawing.Size(144, 20)
-        Me.txtContactNo.TabIndex = 7
-        '
-        'lblDateOfReg
-        '
-        Me.lblDateOfReg.AutoSize = True
-        Me.lblDateOfReg.Location = New System.Drawing.Point(294, 68)
-        Me.lblDateOfReg.Name = "lblDateOfReg"
-        Me.lblDateOfReg.Size = New System.Drawing.Size(103, 13)
-        Me.lblDateOfReg.TabIndex = 8
-        Me.lblDateOfReg.Text = "Date Of Registration"
-        '
-        'dtpDateOfReg
-        '
-        Me.dtpDateOfReg.Location = New System.Drawing.Point(410, 60)
-        Me.dtpDateOfReg.Name = "dtpDateOfReg"
-        Me.dtpDateOfReg.Size = New System.Drawing.Size(144, 20)
-        Me.dtpDateOfReg.TabIndex = 9
-        '
-        'lblGender
-        '
-        Me.lblGender.AutoSize = True
-        Me.lblGender.Location = New System.Drawing.Point(297, 106)
-        Me.lblGender.Name = "lblGender"
-        Me.lblGender.Size = New System.Drawing.Size(42, 13)
-        Me.lblGender.TabIndex = 10
-        Me.lblGender.Text = "Gender"
-        '
-        'rbMale
-        '
-        Me.rbMale.AutoSize = True
-        Me.rbMale.Location = New System.Drawing.Point(410, 104)
-        Me.rbMale.Name = "rbMale"
-        Me.rbMale.Size = New System.Drawing.Size(48, 17)
-        Me.rbMale.TabIndex = 11
-        Me.rbMale.TabStop = True
-        Me.rbMale.Text = "Male"
-        Me.rbMale.UseVisualStyleBackColor = True
-        '
-        'rbFemale
-        '
-        Me.rbFemale.AutoSize = True
-        Me.rbFemale.Location = New System.Drawing.Point(495, 104)
-        Me.rbFemale.Name = "rbFemale"
-        Me.rbFemale.Size = New System.Drawing.Size(59, 17)
-        Me.rbFemale.TabIndex = 12
-        Me.rbFemale.TabStop = True
-        Me.rbFemale.Text = "Female"
-        Me.rbFemale.UseVisualStyleBackColor = True
-        '
-        'lblDateOfBirth
-        '
-        Me.lblDateOfBirth.AutoSize = True
-        Me.lblDateOfBirth.Location = New System.Drawing.Point(297, 144)
-        Me.lblDateOfBirth.Name = "lblDateOfBirth"
-        Me.lblDateOfBirth.Size = New System.Drawing.Size(68, 13)
-        Me.lblDateOfBirth.TabIndex = 13
-        Me.lblDateOfBirth.Text = "Date Of Birth"
-        '
-        'dtpDateOfBirth
-        '
-        Me.dtpDateOfBirth.Location = New System.Drawing.Point(410, 144)
-        Me.dtpDateOfBirth.Name = "dtpDateOfBirth"
-        Me.dtpDateOfBirth.Size = New System.Drawing.Size(144, 20)
-        Me.dtpDateOfBirth.TabIndex = 14
+        Me.lblHistory.AutoSize = True
+        Me.lblHistory.Location = New System.Drawing.Point(7, 32)
+        Me.lblHistory.Name = "lblHistory"
+        Me.lblHistory.Size = New System.Drawing.Size(39, 13)
+        Me.lblHistory.TabIndex = 0
+        Me.lblHistory.Text = "History"
         '
         'btnClear
         '
@@ -265,63 +289,152 @@ Partial Class Patient_Registration
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'gbMedicineInformation
+        'dtpDateOfBirth
         '
-        Me.gbMedicineInformation.Controls.Add(Me.RichTextBox2)
-        Me.gbMedicineInformation.Controls.Add(Me.lblCurrentProblem)
-        Me.gbMedicineInformation.Controls.Add(Me.RichTextBox1)
-        Me.gbMedicineInformation.Controls.Add(Me.lblHistory)
-        Me.gbMedicineInformation.Location = New System.Drawing.Point(16, 194)
-        Me.gbMedicineInformation.Name = "gbMedicineInformation"
-        Me.gbMedicineInformation.Size = New System.Drawing.Size(544, 157)
-        Me.gbMedicineInformation.TabIndex = 20
-        Me.gbMedicineInformation.TabStop = False
-        Me.gbMedicineInformation.Text = "Medicine Information"
+        Me.dtpDateOfBirth.Location = New System.Drawing.Point(410, 144)
+        Me.dtpDateOfBirth.Name = "dtpDateOfBirth"
+        Me.dtpDateOfBirth.Size = New System.Drawing.Size(144, 20)
+        Me.dtpDateOfBirth.TabIndex = 14
         '
-        'lblHistory
+        'lblDateOfBirth
         '
-        Me.lblHistory.AutoSize = True
-        Me.lblHistory.Location = New System.Drawing.Point(7, 32)
-        Me.lblHistory.Name = "lblHistory"
-        Me.lblHistory.Size = New System.Drawing.Size(39, 13)
-        Me.lblHistory.TabIndex = 0
-        Me.lblHistory.Text = "History"
+        Me.lblDateOfBirth.AutoSize = True
+        Me.lblDateOfBirth.Location = New System.Drawing.Point(297, 144)
+        Me.lblDateOfBirth.Name = "lblDateOfBirth"
+        Me.lblDateOfBirth.Size = New System.Drawing.Size(68, 13)
+        Me.lblDateOfBirth.TabIndex = 13
+        Me.lblDateOfBirth.Text = "Date Of Birth"
         '
-        'RichTextBox1
+        'rbFemale
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(90, 32)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(144, 96)
-        Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = ""
+        Me.rbFemale.AutoSize = True
+        Me.rbFemale.Location = New System.Drawing.Point(495, 104)
+        Me.rbFemale.Name = "rbFemale"
+        Me.rbFemale.Size = New System.Drawing.Size(59, 17)
+        Me.rbFemale.TabIndex = 12
+        Me.rbFemale.TabStop = True
+        Me.rbFemale.Text = "Female"
+        Me.rbFemale.UseVisualStyleBackColor = True
         '
-        'lblCurrentProblem
+        'rbMale
         '
-        Me.lblCurrentProblem.AutoSize = True
-        Me.lblCurrentProblem.Location = New System.Drawing.Point(271, 32)
-        Me.lblCurrentProblem.Name = "lblCurrentProblem"
-        Me.lblCurrentProblem.Size = New System.Drawing.Size(82, 13)
-        Me.lblCurrentProblem.TabIndex = 2
-        Me.lblCurrentProblem.Text = "Current Problem"
+        Me.rbMale.AutoSize = True
+        Me.rbMale.Location = New System.Drawing.Point(410, 104)
+        Me.rbMale.Name = "rbMale"
+        Me.rbMale.Size = New System.Drawing.Size(48, 17)
+        Me.rbMale.TabIndex = 11
+        Me.rbMale.TabStop = True
+        Me.rbMale.Text = "Male"
+        Me.rbMale.UseVisualStyleBackColor = True
         '
-        'RichTextBox2
+        'lblGender
         '
-        Me.RichTextBox2.Location = New System.Drawing.Point(384, 32)
-        Me.RichTextBox2.Name = "RichTextBox2"
-        Me.RichTextBox2.Size = New System.Drawing.Size(144, 96)
-        Me.RichTextBox2.TabIndex = 3
-        Me.RichTextBox2.Text = ""
+        Me.lblGender.AutoSize = True
+        Me.lblGender.Location = New System.Drawing.Point(297, 106)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(42, 13)
+        Me.lblGender.TabIndex = 10
+        Me.lblGender.Text = "Gender"
+        '
+        'dtpDateOfReg
+        '
+        Me.dtpDateOfReg.Location = New System.Drawing.Point(410, 60)
+        Me.dtpDateOfReg.Name = "dtpDateOfReg"
+        Me.dtpDateOfReg.Size = New System.Drawing.Size(144, 20)
+        Me.dtpDateOfReg.TabIndex = 9
+        '
+        'lblDateOfReg
+        '
+        Me.lblDateOfReg.AutoSize = True
+        Me.lblDateOfReg.Location = New System.Drawing.Point(294, 68)
+        Me.lblDateOfReg.Name = "lblDateOfReg"
+        Me.lblDateOfReg.Size = New System.Drawing.Size(103, 13)
+        Me.lblDateOfReg.TabIndex = 8
+        Me.lblDateOfReg.Text = "Date Of Registration"
+        '
+        'txtContactNo
+        '
+        Me.txtContactNo.Location = New System.Drawing.Point(116, 144)
+        Me.txtContactNo.Name = "txtContactNo"
+        Me.txtContactNo.Size = New System.Drawing.Size(144, 20)
+        Me.txtContactNo.TabIndex = 7
+        '
+        'lblContactNo
+        '
+        Me.lblContactNo.AutoSize = True
+        Me.lblContactNo.Location = New System.Drawing.Point(23, 144)
+        Me.lblContactNo.Name = "lblContactNo"
+        Me.lblContactNo.Size = New System.Drawing.Size(61, 13)
+        Me.lblContactNo.TabIndex = 6
+        Me.lblContactNo.Text = "Contact No"
+        '
+        'txtPatientNo
+        '
+        Me.txtPatientNo.Location = New System.Drawing.Point(410, 26)
+        Me.txtPatientNo.Name = "txtPatientNo"
+        Me.txtPatientNo.Size = New System.Drawing.Size(144, 20)
+        Me.txtPatientNo.TabIndex = 5
+        '
+        'lblPatientNo
+        '
+        Me.lblPatientNo.AutoSize = True
+        Me.lblPatientNo.Location = New System.Drawing.Point(294, 33)
+        Me.lblPatientNo.Name = "lblPatientNo"
+        Me.lblPatientNo.Size = New System.Drawing.Size(57, 13)
+        Me.lblPatientNo.TabIndex = 4
+        Me.lblPatientNo.Text = "Patient No"
+        '
+        'lblPatientName
+        '
+        Me.lblPatientName.AutoSize = True
+        Me.lblPatientName.Location = New System.Drawing.Point(20, 26)
+        Me.lblPatientName.Name = "lblPatientName"
+        Me.lblPatientName.Size = New System.Drawing.Size(71, 13)
+        Me.lblPatientName.TabIndex = 0
+        Me.lblPatientName.Text = "Patient Name"
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Location = New System.Drawing.Point(116, 68)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(144, 52)
+        Me.txtAddress.TabIndex = 3
+        Me.txtAddress.Text = ""
+        '
+        'lblAddress
+        '
+        Me.lblAddress.AutoSize = True
+        Me.lblAddress.Location = New System.Drawing.Point(23, 68)
+        Me.lblAddress.Name = "lblAddress"
+        Me.lblAddress.Size = New System.Drawing.Size(45, 13)
+        Me.lblAddress.TabIndex = 1
+        Me.lblAddress.Text = "Address"
+        '
+        'txtPatientName
+        '
+        Me.txtPatientName.Location = New System.Drawing.Point(116, 26)
+        Me.txtPatientName.Name = "txtPatientName"
+        Me.txtPatientName.Size = New System.Drawing.Size(144, 20)
+        Me.txtPatientName.TabIndex = 2
+        '
+        'PATIENTTableAdapter
+        '
+        Me.PATIENTTableAdapter.ClearBeforeFill = True
         '
         'Patient_Registration
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 461)
+        Me.AutoSize = True
+        Me.ClientSize = New System.Drawing.Size(1330, 471)
         Me.Controls.Add(Me.gbPatientReg)
         Me.Controls.Add(Me.dgvPatientDetails)
         Me.Name = "Patient_Registration"
-        Me.Text = "Patient_Registration"
+        Me.ShowIcon = False
+        Me.Text = "Patient Registration"
         CType(Me.dgvPatientDetails, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PATIENTBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MEDICADataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gbPatientReg.ResumeLayout(False)
         Me.gbPatientReg.PerformLayout()
         Me.gbMedicineInformation.ResumeLayout(False)
@@ -356,4 +469,14 @@ Partial Class Patient_Registration
     Friend WithEvents lblCurrentProblem As System.Windows.Forms.Label
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents lblHistory As System.Windows.Forms.Label
+    Friend WithEvents MEDICADataSet As Medica.MEDICADataSet
+    Friend WithEvents PATIENTBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents PATIENTTableAdapter As Medica.MEDICADataSetTableAdapters.PATIENTTableAdapter
+    Friend WithEvents PATIENTNODataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PATIENTNAMEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PATIENTADDRESSDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PATREGDATEDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PATGENDERDataGridViewCheckBoxColumn As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents PATCONTACTDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PATBDAYDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
