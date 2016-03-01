@@ -126,16 +126,34 @@
     <Compile Include="Views\Master Interface\Master Interface.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\Order Information\Order Details.Designer.vb">
+      <DependentUpon>Order Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Order Information\Order Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\Patient Information\Patient Registration.Designer.vb">
       <DependentUpon>Patient Registration.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\Patient Information\Patient Registration.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Views\Patient Information\PatientEntry.Designer.vb">
+      <DependentUpon>PatientEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Patient Information\PatientEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\Stock Management\Medicine Details.Designer.vb">
       <DependentUpon>Medicine Details.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\Stock Management\Medicine Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Stock Management\Stock Details.Designer.vb">
+      <DependentUpon>Stock Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Stock Management\Stock Details.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -155,11 +173,17 @@
     <EmbeddedResource Include="Views\Master Interface\Master Interface.resx">
       <DependentUpon>Master Interface.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Order Information\Order Details.resx">
+      <DependentUpon>Order Details.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Patient Information\Patient Registration.resx">
       <DependentUpon>Patient Registration.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Stock Management\Medicine Details.resx">
       <DependentUpon>Medicine Details.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Stock Management\Stock Details.resx">
+      <DependentUpon>Stock Details.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
