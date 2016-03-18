@@ -1,4 +1,9 @@
-﻿Public Class Doctor_Registration
+﻿Imports Medica.DataAccess
+
+
+Public Class Doctor_Registration
+    Dim da As DataAccess
+
 
     Private Sub Doctor_Registration_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'DoctorDetails.DOCTOR' table. You can move, or remove it, as needed.
@@ -11,6 +16,19 @@
     End Sub
 
     Private Sub dgvDoctorDetails_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvDoctorDetails.CellContentClick
+
+    End Sub
+
+    Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+        da = New DataAccess
+        Dim gender As Integer = 0
+        If rbMale.Checked Then
+            gender = 1
+        ElseIf rbFemale.Checked Then
+            gender = 0
+
+        End If
+        da.insertDoctor(txtDoctorNo.Text, txtDoctorName.Text, txtAddress.Text, Date.Parse(dtpDateOfReg.Value), gender, Int32.Parse(txtContactNo.Text), Date.Parse(dtpDateOfBirth.Value))
 
     End Sub
 End Class

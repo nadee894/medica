@@ -10,7 +10,7 @@ Public Class DBControl
     Public Function hasConnection() As Boolean
         Try
             SQLCon.Open()
-            SQLCon.Close()
+            'SQLCon.Close()
             Return True
         Catch ex As Exception
             MsgBox(ex.Message)

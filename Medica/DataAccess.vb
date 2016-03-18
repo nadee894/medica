@@ -3,20 +3,75 @@
 Imports System
 Imports System.Data
 Imports System.Data.OleDb
+Imports System.Data.SqlClient
+Imports Medica.DBControl
+
+
 
 Public Class DataAccess
 
-    Private connectionString As String
+    Dim mydao As New DBControl
+    Dim connectionString As String = mydao.hasConnection()
+    Dim connection As New SqlConnection(connectionString)
+    Dim cmd As New SqlCommand
 
-    Public Sub New()
 
-        Dim con As New OleDb.OleDbConnection
-        Dim dbProvider As String = "Provider=Microsoft.ace.oledb.12.0;"
-        Dim dbSource = "Data Source=d:\DB\Database11.accdb"
+    'Public Sub insertDoctor()
+    '    Dim reader As SqlDataReader
+    '    mysqlConn = New SqlConnection
 
-        connectionString = dbProvider & dbSource
 
-    End Sub
+    '    command.CommandText = "INSERT INTO Doctor VALUES (‘jQuery’)"
+    '    command.Connection = mysqlConn
+    '    mysqlConn.Open()
+    '    'here execute scalar will get firsr row first column value
+    '    Dim retValue As Integer = command.ExecuteNonQuery()
+    '    If retValue > 0 Then
+    '        lblReturnValue.Text = retValue & " record(s) inserted!"
+    '        'record(s) inserted so rebind fresh data
+    '        BindGridviewFileData()
+    '    Else
+    '        lblReturnValue.Text = "No record(s) inserted!"
+    '    End If
+    '    sqlConn.Close()
+
+    'End Sub
+    Public Function insertDoctor(ByVal DOCTOR_NO As Integer, ByVal DOCTOR_NAME As String, ByVal DOCTOR_ADDRESS As String, ByVal DOC_REG_DATE As Date, ByVal DOC_GENDER As String, ByVal DOC_CONTACT As Integer, ByVal DOC_BDAY As Date) As Integer
+
+        Dim mydao As New SqlConnection
+
+        Using connection As New SqlConnection(mydao.ConnectionString())
+
+            Using command As New SqlCommand()
+                ' Set the connection
+                command.Connection = connection
+
+                ' Not necessary, but good practice
+                command.CommandType = CommandType.Text
+
+                ' Example query using parameters
+                command.CommandText = "INSERT INTO [dbo].[DOCTOR] ([DOCTOR_NO],[DOCTOR_NAME],[DOCTOR_ADDRESS],[DOC_REG_DATE],[DOC_GENDER] ,[DOC_CONTACT],[DOC_BDAY]) VALUES (@DOCTOR_NO,@DOCTOR_NAME,@DOCTOR_ADDRESS,@DOC_REG_DATE,@DOC_GENDER,@DOC_CONTACT,@DOC_BDAY)"
+
+                ' Adding the parameters to the command
+                command.Parameters.AddWithValue("@DOCTOR_NO", DOCTOR_NO)
+                command.Parameters.AddWithValue("@DOCTOR_NAME", DOCTOR_NAME)
+                command.Parameters.AddWithValue("@DOCTOR_ADDRESS", DOCTOR_ADDRESS)
+                command.Parameters.AddWithValue("@DOC_REG_DATE", DOC_REG_DATE)
+                command.Parameters.AddWithValue("@DOC_GENDER", DOC_GENDER)
+                command.Parameters.AddWithValue("@DOC_CONTACT", DOC_CONTACT)
+                command.Parameters.AddWithValue("@DOC_BDAY", DOC_BDAY)
+
+                connection.Open()
+
+                Return command.ExecuteNonQuery()
+
+            End Using ' Dispose Command
+
+        End Using ' Dispose (and hence Close) Connection
+
+    End Function
+
+
 
     Public Function GetPatientDetails() As DataSet
 

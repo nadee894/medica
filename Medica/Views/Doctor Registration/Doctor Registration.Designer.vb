@@ -233,13 +233,13 @@ Partial Class Doctor_Registration
         Me.rbFemale.Name = "rbFemale"
         Me.rbFemale.Size = New System.Drawing.Size(59, 17)
         Me.rbFemale.TabIndex = 12
-        Me.rbFemale.TabStop = True
         Me.rbFemale.Text = "Female"
         Me.rbFemale.UseVisualStyleBackColor = True
         '
         'rbMale
         '
         Me.rbMale.AutoSize = True
+        Me.rbMale.Checked = True
         Me.rbMale.Location = New System.Drawing.Point(410, 104)
         Me.rbMale.Name = "rbMale"
         Me.rbMale.Size = New System.Drawing.Size(48, 17)

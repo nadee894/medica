@@ -11,3 +11,6 @@ C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.pdb
 C:\Users\Nadeesha\Documents\GitHub\medica\Medica\bin\Debug\Medica.exe.config
 C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Doctor_Registration.resources
 C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Master_Interface.resources
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Order_Details.resources
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Medicine_Details.resources
+C:\Users\Nadeesha\Documents\GitHub\medica\Medica\obj\x86\Debug\Medica.Stock_Details.resources
