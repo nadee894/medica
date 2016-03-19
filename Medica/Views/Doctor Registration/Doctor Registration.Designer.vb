@@ -26,6 +26,7 @@ Partial Class Doctor_Registration
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Doctor_Registration))
         Me.gbDoctorReg = New System.Windows.Forms.GroupBox()
         Me.gbQualifications = New System.Windows.Forms.GroupBox()
         Me.txtSpecialization = New System.Windows.Forms.TextBox()
@@ -340,6 +341,7 @@ Partial Class Doctor_Registration
         '
         'dgvDoctorDetails
         '
+        Me.dgvDoctorDetails.AllowUserToDeleteRows = False
         Me.dgvDoctorDetails.AllowUserToOrderColumns = True
         Me.dgvDoctorDetails.AutoGenerateColumns = False
         Me.dgvDoctorDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -365,6 +367,7 @@ Partial Class Doctor_Registration
         Me.dgvDoctorDetails.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDoctorDetails.Location = New System.Drawing.Point(616, 17)
         Me.dgvDoctorDetails.Name = "dgvDoctorDetails"
+        Me.dgvDoctorDetails.ReadOnly = True
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -381,42 +384,49 @@ Partial Class Doctor_Registration
         Me.DOCTORNODataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_NO"
         Me.DOCTORNODataGridViewTextBoxColumn.HeaderText = "DOCTOR_NO"
         Me.DOCTORNODataGridViewTextBoxColumn.Name = "DOCTORNODataGridViewTextBoxColumn"
+        Me.DOCTORNODataGridViewTextBoxColumn.ReadOnly = True
         '
         'DOCTORNAMEDataGridViewTextBoxColumn
         '
         Me.DOCTORNAMEDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_NAME"
         Me.DOCTORNAMEDataGridViewTextBoxColumn.HeaderText = "DOCTOR_NAME"
         Me.DOCTORNAMEDataGridViewTextBoxColumn.Name = "DOCTORNAMEDataGridViewTextBoxColumn"
+        Me.DOCTORNAMEDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DOCTORADDRESSDataGridViewTextBoxColumn
         '
         Me.DOCTORADDRESSDataGridViewTextBoxColumn.DataPropertyName = "DOCTOR_ADDRESS"
         Me.DOCTORADDRESSDataGridViewTextBoxColumn.HeaderText = "DOCTOR_ADDRESS"
         Me.DOCTORADDRESSDataGridViewTextBoxColumn.Name = "DOCTORADDRESSDataGridViewTextBoxColumn"
+        Me.DOCTORADDRESSDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DOCREGDATEDataGridViewTextBoxColumn
         '
         Me.DOCREGDATEDataGridViewTextBoxColumn.DataPropertyName = "DOC_REG_DATE"
         Me.DOCREGDATEDataGridViewTextBoxColumn.HeaderText = "DOC_REG_DATE"
         Me.DOCREGDATEDataGridViewTextBoxColumn.Name = "DOCREGDATEDataGridViewTextBoxColumn"
+        Me.DOCREGDATEDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DOCGENDERDataGridViewCheckBoxColumn
         '
         Me.DOCGENDERDataGridViewCheckBoxColumn.DataPropertyName = "DOC_GENDER"
         Me.DOCGENDERDataGridViewCheckBoxColumn.HeaderText = "DOC_GENDER"
         Me.DOCGENDERDataGridViewCheckBoxColumn.Name = "DOCGENDERDataGridViewCheckBoxColumn"
+        Me.DOCGENDERDataGridViewCheckBoxColumn.ReadOnly = True
         '
         'DOCCONTACTDataGridViewTextBoxColumn
         '
         Me.DOCCONTACTDataGridViewTextBoxColumn.DataPropertyName = "DOC_CONTACT"
         Me.DOCCONTACTDataGridViewTextBoxColumn.HeaderText = "DOC_CONTACT"
         Me.DOCCONTACTDataGridViewTextBoxColumn.Name = "DOCCONTACTDataGridViewTextBoxColumn"
+        Me.DOCCONTACTDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DOCBDAYDataGridViewTextBoxColumn
         '
         Me.DOCBDAYDataGridViewTextBoxColumn.DataPropertyName = "DOC_BDAY"
         Me.DOCBDAYDataGridViewTextBoxColumn.HeaderText = "DOC_BDAY"
         Me.DOCBDAYDataGridViewTextBoxColumn.Name = "DOCBDAYDataGridViewTextBoxColumn"
+        Me.DOCBDAYDataGridViewTextBoxColumn.ReadOnly = True
         '
         'DOCTORBindingSource
         '
@@ -434,13 +444,17 @@ Partial Class Doctor_Registration
         '
         'Doctor_Registration
         '
+        Me.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1330, 471)
         Me.Controls.Add(Me.gbDoctorReg)
         Me.Controls.Add(Me.dgvDoctorDetails)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.IsMdiContainer = True
         Me.Name = "Doctor_Registration"
         Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Doctor Registration"
         Me.gbDoctorReg.ResumeLayout(False)
         Me.gbDoctorReg.PerformLayout()

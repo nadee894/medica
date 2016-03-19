@@ -7,9 +7,16 @@
     End Sub
 
     Private Sub DetailsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Doctor_Registration.Show()
-    End Sub
 
+        Dim docForm = New Doctor_Registration
+        docForm.MdiParent = Me
+        docForm.Show()
+      
+
+
+
+        
+    End Sub
     Private Sub DoctorDetailsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DoctorDetailsToolStripMenuItem.Click
         Doctor_Registration.Show()
     End Sub

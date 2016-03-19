@@ -125,13 +125,13 @@ Partial Class Master_Interface
         'DoctorDetailsToolStripMenuItem
         '
         Me.DoctorDetailsToolStripMenuItem.Name = "DoctorDetailsToolStripMenuItem"
-        Me.DoctorDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DoctorDetailsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.DoctorDetailsToolStripMenuItem.Text = "Doctor Details"
         '
         'StaffDetailsToolStripMenuItem
         '
         Me.StaffDetailsToolStripMenuItem.Name = "StaffDetailsToolStripMenuItem"
-        Me.StaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.StaffDetailsToolStripMenuItem.Text = "Staff Details"
         '
         'Master_Interface
@@ -140,11 +140,13 @@ Partial Class Master_Interface
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1330, 515)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Master_Interface"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Suwasetha Clinic"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PATIENTBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PatientData, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()

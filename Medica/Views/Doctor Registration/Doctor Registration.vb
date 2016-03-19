@@ -20,6 +20,7 @@ Public Class Doctor_Registration
     End Sub
 
     Private Sub btnAdd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdd.Click
+
         da = New DataAccess
         Dim gender As Integer = 0
         If rbMale.Checked Then
@@ -28,7 +29,7 @@ Public Class Doctor_Registration
             gender = 0
 
         End If
-        da.insertDoctor(txtDoctorNo.Text, txtDoctorName.Text, txtAddress.Text, Date.Parse(dtpDateOfReg.Value), gender, Int32.Parse(txtContactNo.Text), Date.Parse(dtpDateOfBirth.Value))
-
+        da.insertDoctor(Int32.Parse(txtDoctorNo.Text), txtDoctorName.Text, txtAddress.Text, Date.Parse(dtpDateOfReg.Value), gender, txtContactNo.Text, Date.Parse(dtpDateOfBirth.Value))
+        Me.DOCTORTableAdapter.Fill(Me.DoctorDetails.DOCTOR)
     End Sub
 End Class
