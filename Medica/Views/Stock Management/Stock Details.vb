@@ -8,6 +8,7 @@ Public Class Stock_Details
 
     Private Sub stockUnitClear()
         txtStockId1.Text = newId.GenerateID("STOCK_UNIT", "STOCK_UNIT_ID")
+        txtStockID.Text = newId.GenerateID("STOCK_UNIT", "STOCK_UNIT_ID")
         txtStockUnit.Clear()
     End Sub
 
@@ -77,20 +78,28 @@ Public Class Stock_Details
     Private Sub btnSearch1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch1.Click
         txtStockId1.Enabled = True
 
-        Try
-            Me.STOCK_UNITTableAdapter.STOCK_UNIT_NAME(Me.STOCK_UNITDataSet1.STOCK_UNIT, txtStockUnit.Text & "%")
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
+        'Try
+        '    Me.STOCK_UNITTableAdapter.STOCK_UNIT_NAME(Me.STOCK_UNITDataSet1.STOCK_UNIT, txtStockUnit.Text & "%")
+        'Catch ex As System.Exception
+        '    System.Windows.Forms.MessageBox.Show(ex.Message)
 
-        End Try
+        'End Try
     End Sub
 
-    Private Sub STOCK_UNIT_NAMEToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles STOCK_UNIT_NAMEToolStripButton.Click
+    Private Sub STOCK_UNIT_NAMEToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
-            Me.STOCK_UNITTableAdapter.STOCK_UNIT_NAME(Me.STOCK_UNITDataSet1.STOCK_UNIT, STOCK_UNIT_NAMEToolStripTextBox.Text)
+            Me.STOCK_UNITTableAdapter.STOCK_UNIT_NAME(Me.STOCK_UNITDataSet1.STOCK_UNIT, STOCK_UNIT_NAMEToolStripTextBox.Text & "%")
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+
+    End Sub
+
+    Private Sub STOCK_UNIT_NAMEToolStrip_ItemClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.ToolStripItemClickedEventArgs)
+
+    End Sub
+
+    Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
 
     End Sub
 End Class

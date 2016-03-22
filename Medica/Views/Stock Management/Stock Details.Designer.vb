@@ -23,12 +23,13 @@ Partial Class Stock_Details
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Stock_Details))
         Me.gbStockDetails = New System.Windows.Forms.GroupBox()
         Me.gbAddStockUnits = New System.Windows.Forms.GroupBox()
         Me.txtStockUnit = New System.Windows.Forms.TextBox()
@@ -64,6 +65,7 @@ Partial Class Stock_Details
         Me.STOCK_UNIT_NAMEToolStripLabel = New System.Windows.Forms.ToolStripLabel()
         Me.STOCK_UNIT_NAMEToolStripTextBox = New System.Windows.Forms.ToolStripTextBox()
         Me.STOCK_UNIT_NAMEToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.gbStockDetails.SuspendLayout()
         Me.gbAddStockUnits.SuspendLayout()
         CType(Me.dgvStockDetails, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,6 +100,7 @@ Partial Class Stock_Details
         '
         'gbAddStockUnits
         '
+        Me.gbAddStockUnits.Controls.Add(Me.STOCK_UNIT_NAMEToolStrip)
         Me.gbAddStockUnits.Controls.Add(Me.txtStockUnit)
         Me.gbAddStockUnits.Controls.Add(Me.lblStockUnit1)
         Me.gbAddStockUnits.Controls.Add(Me.btnClear1)
@@ -307,33 +310,33 @@ Partial Class Stock_Details
         Me.dgvStockDetails.AllowUserToOrderColumns = True
         Me.dgvStockDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvStockDetails.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStockDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStockDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         Me.dgvStockDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvStockDetails.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvStockDetails.DefaultCellStyle = DataGridViewCellStyle14
         Me.dgvStockDetails.Location = New System.Drawing.Point(616, 17)
         Me.dgvStockDetails.Name = "dgvStockDetails"
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStockDetails.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStockDetails.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
         Me.dgvStockDetails.Size = New System.Drawing.Size(702, 219)
         Me.dgvStockDetails.TabIndex = 3
         '
@@ -344,36 +347,36 @@ Partial Class Stock_Details
         Me.dgvStockUnitDetails.AutoGenerateColumns = False
         Me.dgvStockUnitDetails.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvStockUnitDetails.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStockUnitDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStockUnitDetails.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle16
         Me.dgvStockUnitDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvStockUnitDetails.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.STOCKUNITIDDataGridViewTextBoxColumn, Me.STOCKUNITNAMEDataGridViewTextBoxColumn})
         Me.dgvStockUnitDetails.DataSource = Me.STOCKUNITBindingSource
-        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvStockUnitDetails.DefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle17.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvStockUnitDetails.DefaultCellStyle = DataGridViewCellStyle17
         Me.dgvStockUnitDetails.Location = New System.Drawing.Point(616, 256)
         Me.dgvStockUnitDetails.Name = "dgvStockUnitDetails"
         Me.dgvStockUnitDetails.ReadOnly = True
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvStockUnitDetails.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvStockUnitDetails.RowHeadersDefaultCellStyle = DataGridViewCellStyle18
         Me.dgvStockUnitDetails.Size = New System.Drawing.Size(702, 189)
         Me.dgvStockUnitDetails.TabIndex = 4
         '
@@ -407,37 +410,45 @@ Partial Class Stock_Details
         '
         'STOCK_UNIT_NAMEToolStrip
         '
-        Me.STOCK_UNIT_NAMEToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STOCK_UNIT_NAMEToolStripLabel, Me.STOCK_UNIT_NAMEToolStripTextBox, Me.STOCK_UNIT_NAMEToolStripButton})
-        Me.STOCK_UNIT_NAMEToolStrip.Location = New System.Drawing.Point(0, 0)
+        Me.STOCK_UNIT_NAMEToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.STOCK_UNIT_NAMEToolStripLabel, Me.STOCK_UNIT_NAMEToolStripTextBox, Me.STOCK_UNIT_NAMEToolStripButton, Me.ToolStripButton1})
+        Me.STOCK_UNIT_NAMEToolStrip.Location = New System.Drawing.Point(3, 16)
         Me.STOCK_UNIT_NAMEToolStrip.Name = "STOCK_UNIT_NAMEToolStrip"
-        Me.STOCK_UNIT_NAMEToolStrip.Size = New System.Drawing.Size(1338, 25)
-        Me.STOCK_UNIT_NAMEToolStrip.TabIndex = 5
+        Me.STOCK_UNIT_NAMEToolStrip.Size = New System.Drawing.Size(536, 25)
+        Me.STOCK_UNIT_NAMEToolStrip.TabIndex = 64
         Me.STOCK_UNIT_NAMEToolStrip.Text = "STOCK_UNIT_NAMEToolStrip"
         '
         'STOCK_UNIT_NAMEToolStripLabel
         '
         Me.STOCK_UNIT_NAMEToolStripLabel.Name = "STOCK_UNIT_NAMEToolStripLabel"
-        Me.STOCK_UNIT_NAMEToolStripLabel.Size = New System.Drawing.Size(118, 15)
-        Me.STOCK_UNIT_NAMEToolStripLabel.Text = "STOCK_UNIT_NAME:"
+        Me.STOCK_UNIT_NAMEToolStripLabel.Size = New System.Drawing.Size(61, 22)
+        Me.STOCK_UNIT_NAMEToolStripLabel.Text = "Stock Unit"
         '
         'STOCK_UNIT_NAMEToolStripTextBox
         '
         Me.STOCK_UNIT_NAMEToolStripTextBox.Name = "STOCK_UNIT_NAMEToolStripTextBox"
-        Me.STOCK_UNIT_NAMEToolStripTextBox.Size = New System.Drawing.Size(100, 23)
+        Me.STOCK_UNIT_NAMEToolStripTextBox.Size = New System.Drawing.Size(100, 25)
         '
         'STOCK_UNIT_NAMEToolStripButton
         '
         Me.STOCK_UNIT_NAMEToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
         Me.STOCK_UNIT_NAMEToolStripButton.Name = "STOCK_UNIT_NAMEToolStripButton"
-        Me.STOCK_UNIT_NAMEToolStripButton.Size = New System.Drawing.Size(119, 19)
-        Me.STOCK_UNIT_NAMEToolStripButton.Text = "STOCK_UNIT_NAME"
+        Me.STOCK_UNIT_NAMEToolStripButton.Size = New System.Drawing.Size(46, 22)
+        Me.STOCK_UNIT_NAMEToolStripButton.Text = "Search"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'Stock_Details
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1338, 474)
-        Me.Controls.Add(Me.STOCK_UNIT_NAMEToolStrip)
         Me.Controls.Add(Me.dgvStockUnitDetails)
         Me.Controls.Add(Me.gbStockDetails)
         Me.Controls.Add(Me.dgvStockDetails)
@@ -456,7 +467,6 @@ Partial Class Stock_Details
         Me.STOCK_UNIT_NAMEToolStrip.ResumeLayout(False)
         Me.STOCK_UNIT_NAMEToolStrip.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents gbStockDetails As System.Windows.Forms.GroupBox
@@ -494,4 +504,5 @@ Partial Class Stock_Details
     Friend WithEvents STOCK_UNIT_NAMEToolStripLabel As System.Windows.Forms.ToolStripLabel
     Friend WithEvents STOCK_UNIT_NAMEToolStripTextBox As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents STOCK_UNIT_NAMEToolStripButton As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 End Class
