@@ -451,7 +451,7 @@ Partial Class Doctor_Registration
         Me.Controls.Add(Me.gbDoctorReg)
         Me.Controls.Add(Me.dgvDoctorDetails)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.IsMdiContainer = True
+        Me.KeyPreview = True
         Me.Name = "Doctor_Registration"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

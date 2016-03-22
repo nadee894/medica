@@ -39,6 +39,15 @@ Partial Class Master_Interface
         Me.EmployeeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DoctorDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StaffDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PatientToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PatientDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PatientEntryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StockManagemenrToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrderDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SupplierDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrderDetailsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MedicineDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PATIENTBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PatientData, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,7 +117,7 @@ Partial Class Master_Interface
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeeToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeeToolStripMenuItem, Me.PatientToolStripMenuItem, Me.StockManagemenrToolStripMenuItem, Me.SupplierToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1330, 24)
@@ -125,14 +134,71 @@ Partial Class Master_Interface
         'DoctorDetailsToolStripMenuItem
         '
         Me.DoctorDetailsToolStripMenuItem.Name = "DoctorDetailsToolStripMenuItem"
-        Me.DoctorDetailsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.DoctorDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DoctorDetailsToolStripMenuItem.Text = "Doctor Details"
         '
         'StaffDetailsToolStripMenuItem
         '
         Me.StaffDetailsToolStripMenuItem.Name = "StaffDetailsToolStripMenuItem"
-        Me.StaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.StaffDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StaffDetailsToolStripMenuItem.Text = "Staff Details"
+        '
+        'PatientToolStripMenuItem
+        '
+        Me.PatientToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PatientDetailsToolStripMenuItem, Me.PatientEntryToolStripMenuItem})
+        Me.PatientToolStripMenuItem.Name = "PatientToolStripMenuItem"
+        Me.PatientToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
+        Me.PatientToolStripMenuItem.Text = "Patient"
+        '
+        'PatientDetailsToolStripMenuItem
+        '
+        Me.PatientDetailsToolStripMenuItem.Name = "PatientDetailsToolStripMenuItem"
+        Me.PatientDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PatientDetailsToolStripMenuItem.Text = "Patient Details"
+        '
+        'PatientEntryToolStripMenuItem
+        '
+        Me.PatientEntryToolStripMenuItem.Name = "PatientEntryToolStripMenuItem"
+        Me.PatientEntryToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PatientEntryToolStripMenuItem.Text = "Patient Entry"
+        '
+        'StockManagemenrToolStripMenuItem
+        '
+        Me.StockManagemenrToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrderDetailsToolStripMenuItem, Me.MedicineDetailsToolStripMenuItem})
+        Me.StockManagemenrToolStripMenuItem.Name = "StockManagemenrToolStripMenuItem"
+        Me.StockManagemenrToolStripMenuItem.Size = New System.Drawing.Size(122, 20)
+        Me.StockManagemenrToolStripMenuItem.Text = "Stock Management"
+        '
+        'OrderDetailsToolStripMenuItem
+        '
+        Me.OrderDetailsToolStripMenuItem.Name = "OrderDetailsToolStripMenuItem"
+        Me.OrderDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OrderDetailsToolStripMenuItem.Text = "Stock Details"
+        '
+        'SupplierToolStripMenuItem
+        '
+        Me.SupplierToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SupplierDetailsToolStripMenuItem, Me.OrderDetailsToolStripMenuItem1})
+        Me.SupplierToolStripMenuItem.Name = "SupplierToolStripMenuItem"
+        Me.SupplierToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.SupplierToolStripMenuItem.Text = "Supplier"
+        '
+        'SupplierDetailsToolStripMenuItem
+        '
+        Me.SupplierDetailsToolStripMenuItem.Name = "SupplierDetailsToolStripMenuItem"
+        Me.SupplierDetailsToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
+        Me.SupplierDetailsToolStripMenuItem.Text = "Supplier Details"
+        '
+        'OrderDetailsToolStripMenuItem1
+        '
+        Me.OrderDetailsToolStripMenuItem1.Name = "OrderDetailsToolStripMenuItem1"
+        Me.OrderDetailsToolStripMenuItem1.Size = New System.Drawing.Size(155, 22)
+        Me.OrderDetailsToolStripMenuItem1.Text = "Order Details"
+        '
+        'MedicineDetailsToolStripMenuItem
+        '
+        Me.MedicineDetailsToolStripMenuItem.Name = "MedicineDetailsToolStripMenuItem"
+        Me.MedicineDetailsToolStripMenuItem.Size = New System.Drawing.Size(161, 22)
+        Me.MedicineDetailsToolStripMenuItem.Text = "Medicine Details"
         '
         'Master_Interface
         '
@@ -177,4 +243,13 @@ Partial Class Master_Interface
     Friend WithEvents EmployeeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DoctorDetailsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StaffDetailsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PatientToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PatientDetailsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PatientEntryToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StockManagemenrToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OrderDetailsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SupplierDetailsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OrderDetailsToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MedicineDetailsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

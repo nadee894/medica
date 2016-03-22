@@ -75,7 +75,8 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess.vb" />
+    <Compile Include="Common classes\IdAutoGeneration.vb" />
+    <Compile Include="Common classes\DataAccess.vb" />
     <Compile Include="DBControl.vb" />
     <Compile Include="DoctorDetails.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -91,6 +92,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>patientData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="STOCK_UNITDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STOCK_UNITDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Views\Doctor Registration\Doctor Registration.Designer.vb">
       <DependentUpon>Doctor Registration.vb</DependentUpon>
@@ -130,6 +136,12 @@
       <DependentUpon>Order Details.vb</DependentUpon>
     </Compile>
     <Compile Include="Views\Order Information\Order Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Order Information\Supplier Details.Designer.vb">
+      <DependentUpon>Supplier Details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Order Information\Supplier Details.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Patient Information\Patient Registration.Designer.vb">
@@ -230,6 +242,17 @@
     </None>
     <None Include="patientData.xss">
       <DependentUpon>patientData.xsd</DependentUpon>
+    </None>
+    <None Include="STOCK_UNITDataSet1.xsc">
+      <DependentUpon>STOCK_UNITDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="STOCK_UNITDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>STOCK_UNITDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="STOCK_UNITDataSet1.xss">
+      <DependentUpon>STOCK_UNITDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
